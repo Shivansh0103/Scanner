@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".PhoneVerify">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otp"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="275dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="61dp"
+        android:background="#678783"
+        app:boxBackgroundMode="filled"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/verifyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/perimg"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otpEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:ems="10"
+            android:hint="OTP"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textSize="16sp">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/verifyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="287dp"
+        android:backgroundTint="@color/white"
+        android:text="Verify"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp">
+
+    </Button>
+
+    <ImageView
+        android:id="@+id/perimg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/otp"
+        app:layout_constraintEnd_toStartOf="@+id/otp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/otp"
+        app:srcCompat="@drawable/ic_baseline_lock_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>
