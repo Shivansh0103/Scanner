@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,7 +28,9 @@ import java.util.concurrent.TimeUnit;
 
 public class SignInActivity extends AppCompatActivity {
     Button continueButton;
+    TextView textView;
     EditText name,phonenumber;
+    Button verify;
     public static final String TAG="SignInActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,21 @@ public class SignInActivity extends AppCompatActivity {
         name=findViewById(R.id.nameedittextgoogle);
         phonenumber=findViewById(R.id.phoneedittextgoogle);
         continueButton=findViewById(R.id.button);
+        verify=findViewById(R.id.vbutton);
+        textView=findViewById(R.id.verified);
+        verify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Thread.sleep(4000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                verify.setClickable(false);
+                verify.setVisibility(View.INVISIBLE);
+                textView.setVisibility(View.VISIBLE);
+            }
+        });
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

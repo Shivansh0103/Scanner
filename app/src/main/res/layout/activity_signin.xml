@@ -26,6 +26,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/vbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="@color/white"
+        android:text="Verify"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/verified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verified!"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:layout_marginBottom="70dp"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+    </TextView>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nameg"
         android:layout_width="0dp"
@@ -130,6 +163,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Phoneg" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
